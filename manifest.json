@@ -1,0 +1,24 @@
+
+{
+  "name": "Zariab Calculate",
+  "short_name": "Zariab Calculate",
+  "description": "A modern and free calculator",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#6A0DAD",
+  "theme_color": "#6A0DAD",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+
+  ]
+}

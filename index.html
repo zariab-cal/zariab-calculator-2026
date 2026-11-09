@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6A0DAD">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <title>Zariab calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="top">
+            <div class="logo">
+                <span class="logo-icon">??</span>
+                <span>CALCULATOR</span>
+            </div>
+            <div class="status">PREMIUM</div>
+        </div>
+
+        <div class="display">
+            <div id="history">Ready to calculator</div>
+            <input type="text" id="result" value="0" readonly>
+        </div>
+
+        <div class="buttons">
+            <button class="special" onclick="window.clearAll()">AC</button>
+            <button class="special" onclick="deleteLast()">DEL</button>
+            <button class="special" onclick="append('%')">%</button>
+            <button class="operator" onclick="append('/')">/</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button class="operator" onclick="append('*')">x</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button class="operator" onclick="append('-')">-</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button class="operator" onclick="append('+')">+</button>
+
+            <button class="special" onclick="append('(')">(</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button class="extra" onclick="append('**2')">X2</button>
+            <button class="extra" onclick="append('**')">xy</button>
+            <button class="extra" onclick="append('Math.sqrt(')">-/</button>
+            <button class="extra" onclick="append(')')">)</button>
+        </div>
+
+        <div class="footer">
+            Designed with ZQ | Premium calculator
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+    
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(function () {
+                console.log("App is ready!");
+            })
+            .catch(function (error) {
+                console.log("Service Worker Error:", error);
+            });
+    });
+}
+</script>
+
+</body>
+</html>
